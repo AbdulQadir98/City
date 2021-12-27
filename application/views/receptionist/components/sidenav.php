@@ -25,7 +25,7 @@
         
         </div>
         <div id="menu">
-        <span style="font-size:30px; cursor:pointer" onclick= "openNav()">&#9776;</span>
+            <span style="font-size:30px; cursor:pointer" onclick= "openNav()">&#9776;</span>
         </div>
 
         <div class="sidebar">                               
@@ -58,20 +58,12 @@
             </div>
             <button onclick="dropS()" class="settings"><i class="fas fa-caret-down"></i></button>
             <button onclick="dropN()" class="notification"><i class="fas fa-bell"></i></button>
-            <div class="username">Mr. Samaranayake <br>Receptionist </div>
-            <div class="profile"><img src="<?php echo BASEURL.'/public/assets/img/profile/default.png'?>" alt=""></img>
-            
-        </div>
+            <div class="username"><?php echo $_SESSION['first_name']." ".$_SESSION['last_name']?></div>
+            <!-- <div class="profile"><i class="fas fa-user-circle"></i></div> -->
+            <div class="profile"><img src="<?php echo BASEURL.'/public/assets/img/profile/default.jpg'?>" alt=""></div>
             
         </div> 
-        </div>
-        <!-- <div class="Date">
-            <p> <i class="fas fa-calendar-alt"></i><span id="date"></span></p>
-            <script>
-            var dt = new Date();
-            document.getElementById('date').innerHTML=dt.toDateString();
-            </script>
-        </div> -->
+
         <div id="settings-dropdown" class="dropdown-settings">
             <ul>
                 <li><i class="fas fa-cog icon"></i><a href="<?php echo BASEURL.'/settings'?>">Profile Settings</a></li>

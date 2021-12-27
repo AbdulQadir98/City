@@ -2,6 +2,7 @@
 <?php include "components/sidenav.php"; ?>
 
     <div class="main">
+      
       <div class="search">
         <form action=" " method="post">
           <input type="text" name="search" placeholder="search" >
