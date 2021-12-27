@@ -7,16 +7,16 @@
             
             <?php $result=$data['result']; ?>
             
-            <input type="hidden" name="merchant_id" value="">    <!-- Replace your Merchant ID -->
-            <input type="hidden" name="return_url" value="http://7ba9a4e322be.ngrok.io/payhere/payhandler.php">
-            <input type="hidden" name="cancel_url" value="http://7ba9a4e322be.ngrok.io">
-            <input type="hidden" name="notify_url" value="http://7ba9a4e322be.ngrok.io">  
-            <!-- <input type="hidden" name="order_id" value="<?php echo $data['adId']; ?>">
-            <input type="hidden" name="items" value="Advertisement ID : <?php echo $data['adData']['advertisementID']; ?>"><br>
+            <input type="hidden" name="merchant_id" value="1218755">    <!-- Replace your Merchant ID -->
+            <input type="hidden" name="return_url" value="<?php echo BASEURL.'/home'?>">
+            <input type="hidden" name="cancel_url" value="<?php echo BASEURL.'/home'?>">
+            <input type="hidden" name="notify_url" value="<?php echo BASEURL.'/home'?>">  
+            <input type="hidden" name="order_id" value="<?php echo $result[0][0]; ?>">
+            <input type="hidden" name="items" value="<?php echo $result[0][7]; ?>">
             <input type="hidden" name="currency" value="LKR">
-            <input type="hidden" name="amount" value="<?php echo $data['adPrice']+$data['adPay']; ?>">  
-            <input type="hidden" name="first_name" value="<?php echo $data['jobData']['userName']; ?>"> -->
-            <input type="hidden" name="last_name" value="">
+            <input type="hidden" name="amount" value="<?php echo $result[0][8]; ?>">  
+            <input type="hidden" name="first_name" value="<?php echo $_SESSION['first_name']; ?>">
+            <input type="hidden" name="last_name" value="<?php echo $_SESSION['last_name']; ?>">
             <input type="hidden" name="email" value="samanp@gmail.com">
             <input type="hidden" name="phone" value="0771234567">
             <input type="hidden" name="address" value="No.1, Galle Road">

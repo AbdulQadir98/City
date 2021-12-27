@@ -22,19 +22,27 @@
   height: 400px;
   width: 52%;
   overflow-y: auto;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
   background-color: #CBE5CC;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
 }
 .chat-header {
+  display: flex;
+  align-items: center;
   height: 50px;
-  background-color: var(--color1);
-  padding: 10px;
-  color: white;
+  /* background-color: var(--color1); */
+  color: var(--color1);
   margin: 0px 4px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
 }
-
+.chat-header>img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color1);
+}
 .chat-container {
   margin-top: 5px;
   height: 280px;

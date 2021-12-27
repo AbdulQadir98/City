@@ -6,11 +6,14 @@
             <div class="user"></div>
             <div class="user"></div>
         </div> -->
-        <div class="main-container">  
-            <div class="chat-header"></div>
+        <?php $chat=$data['chat']; ?> 
+        <div class="main-container"> 
+            <div class="chat-header">
+                <img src="<?php echo BASEURL; ?>/public/assets/img/profile/doc.jpg" alt=""/>           
+                <span style="margin-left: 10px;"><?php echo $data['userDetails'][0][1]." ".$data['userDetails'][0][2]; ?></span>
+            </div>
             <div class="chat-container" id="#chat-container">        
                 <?php
-                    $chat=$data['chat'];
                     foreach ($chat as $row){
                         if($row['sender']==$data['sender']){
                             echo "<div align='right'><div class='message-container' id='sender' >".$row['message']."<span class='time'>".substr($row['time'],0,5)."</span></div></div>";

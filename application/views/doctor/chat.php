@@ -8,7 +8,10 @@
             <div class="user"></div>
         </div> -->
         <div class="main-container">  
-            <div class="chat-header"></div>
+            <div class="chat-header">
+                <img src="<?php echo BASEURL; ?>/public/assets/img/profile/male.jpg" alt=""/>           
+                <span style="margin-left: 10px;"><?php echo $data['userDetails'][0][1]." ".$data['userDetails'][0][2]; ?></span>
+            </div>
             <div class="chat-container" id="#chat-container">        
                 <?php
                     $chat=$data['chat'];

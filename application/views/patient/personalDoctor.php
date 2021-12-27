@@ -8,9 +8,9 @@
       foreach ($result as $row): 
       ?>
         <div class="container">
-          <div class="meatball-menu">
+          <!-- <div class="meatball-menu">
             <span></span><span></span><span></span>
-          </div>
+          </div> -->
           <div class="cover-photo">
             <img class="profile-pic" src="<?php echo BASEURL.'/public/assets/img/profile/doc.jpg'?>">
           </div>
