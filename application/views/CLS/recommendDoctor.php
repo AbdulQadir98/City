@@ -1,16 +1,14 @@
 <link rel="stylesheet" href="<?php echo BASEURL.'/public/assets/css/table.css'?>"/>
+<link rel="stylesheet" href="<?php echo BASEURL.'/public/assets/css/search.css'?>"/>
 <?php include "components/sidenav.php"; ?> 
     
     <div class="main">
       
-      <div class="search">
-        <form action=" <?php echo BASEURL.'/report/searchDoctor'?>" method="post">
-          <input type="text" name="search" placeholder="search By Doctor ID" >
-          <button type="submit" name="search_btn" class="fabtn" id="searchbtn" ><i class="fa fa-search fa-lg" ></i></button> 
+        <form action="<?php echo BASEURL.'/report/searchDoctor'?>" method="post">
+          <div class="searchBox">
+            <input type="search" name="search_btn" id="searchbtn" placeholder="search by Doctor ID"><i class="fa fa-search"></i>
+          </div>
         </form>
-      </div>
-
-      <div class="table-container">
       
         <table  class="styled-table" >
           <thead>
@@ -23,17 +21,16 @@
         </thead>
         <?php 
  
- $datas = $this->result;
- 
+          $datas = $this->result;
 
-  if(!empty($datas)){
-    foreach($datas as $data){
-    $doctor_id = $data['doctor_id'];
-    $first_name= $data['first_name'];
-    $last_name= $data['last_name'];
-    
-   
-  ?>
+          if(!empty($datas)){
+            foreach($datas as $data){
+            $doctor_id = $data['doctor_id'];
+            $first_name= $data['first_name'];
+            $last_name= $data['last_name'];
+            
+          
+        ?>
   <tbody >
            
           <tr>        
@@ -49,24 +46,24 @@
             </td>
           </tr>
           
-          <?php
-    }
-              }else{
-                echo "no such report";
+            <?php
             }
-          
+                }else{
+                  echo "no such report";
+              }
+            
 
-              ?>
-        </tbody>
-        
-        
-        </table>
-      </div>
-      <div class="pages">
-        <a href=" <?php echo BASEURL.'/report/createReport'?>"  class="btn11">Back</a>
-        
-        
-      </div>
+                ?>
+          </tbody>
+          
+          
+          </table>
+
+          <div class="pages">
+            <a href=" <?php echo BASEURL.'/report/createReport'?>"  class="btn11">Back</a>
+            
+            
+          </div>
      
 
     </div>  

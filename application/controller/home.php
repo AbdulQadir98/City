@@ -35,6 +35,11 @@ class home extends Controller{
             $this->view->render("CLS/home");
         } 
 
+        if($_SESSION['title'] == "Admin" ){           
+            
+            $this->view->render("admin/home");
+        } 
+
 
     }
 

@@ -4,18 +4,11 @@
 
     <div class="main">
       
-      <div class="search">
-        
-        <form action=" <?php echo BASEURL.'/report/search'?>" method="post">
-          <input type="text" name="search" placeholder="search" >
-          <button type="submit" name="search_btn" class="fabtn" id="searchbtn" >
-            <i class="fa fa-search fa-lg" ></i>
-          </button>
+        <form action="<?php echo BASEURL.'/report/search'?>" method="post">
+          <div class="searchBox">
+            <input type="search" name="search_btn" id="searchbtn" placeholder="search"><i class="fa fa-search"></i>
+          </div>
         </form>
-      
-      </div>
-      
-      <div class="table-container">
       
         <table id="sample_data" class="styled-table" >
           <thead>
@@ -67,11 +60,10 @@
 
             </tbody>
         </table>
-      </div>
 
-    <div class="pages">
-      <a href=" " class="btn1">Back</a>
-    </div>
+      <div class="pages">
+        <a href=" " class="btn1">Back</a>
+      </div>
   </div>  
 </div>
 </body>

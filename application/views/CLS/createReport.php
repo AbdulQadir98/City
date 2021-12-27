@@ -1,17 +1,17 @@
-<?php
-
-if(isset($_GET['doctor_id'])){
-  $_SESSION['doctor_id'] = $_GET['doctor_id']; 
-}
-if(isset($_GET['patient_id'])){
-  $_SESSION['patient_id'] = $_GET['patient_id']; 
-}
-?>
-
 <link rel="stylesheet" href="<?php echo BASEURL.'/public/assets/css/form.css'?>"/>
 <?php include "components/sidenav.php"; ?>   
 
     <div class="main">
+
+    <?php
+      if(isset($_GET['doctor_id'])){
+        $_SESSION['doctor_id'] = $_GET['doctor_id']; 
+      }
+      if(isset($_GET['patient_id'])){
+        $_SESSION['patient_id'] = $_GET['patient_id']; 
+      }
+    ?>
+
       <div class="contents">
         <div class="container">
 

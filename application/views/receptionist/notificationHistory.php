@@ -1,15 +1,14 @@
 <link rel="stylesheet" href="<?php echo BASEURL.'/public/assets/css/table.css'?>"/>
+<link rel="stylesheet" href="<?php echo BASEURL.'/public/assets/css/search.css'?>"/>
 <?php include "components/sidenav.php"; ?>
     
     <div class="main">
-    <div class="search">
-    <form action=" " method="post">
-        <input type="text" name="search" placeholder="search" >
-        <button type="submit" name="search_btn" class="fabtn" id="searchbtn" >
-				<i class="fa fa-search fa-lg" ></i>
-			</button>
-      </div>
-    <div class="table-container">
+
+        <form action="" method="GET">
+          <div class="searchBox">
+            <input type="search" name="search_btn" id="searchbtn" placeholder="Enter Employee ID"><i class="fa fa-search"></i>
+          </div>
+        </form>
         
         <table class="styled-table">
           <thead>
@@ -47,7 +46,7 @@
         </table>
       
 
-    </div>  
+     
 
   </div>
 </body>
